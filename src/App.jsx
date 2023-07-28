@@ -1,7 +1,7 @@
 import { AuthProvider } from "react-auth-kit";
 import { BrowserRouter } from "react-router-dom";
 import Router from "./Router/Router";
-import "../src/assets/init.css";
+import "../src/assets/css/init.css";
 
 function App() {
     return (

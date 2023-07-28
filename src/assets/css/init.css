@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.d-c-c{
+  @apply flex items-center justify-center
+}
+
+.d-c-c-c{
+  @apply flex items-center flex-col justify-center
+}
+
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -13,4 +21,8 @@
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
-} 
+}
+
+.box-shadow{
+  box-shadow: 0px 0px 5px rgb(100, 100, 100) !important;
+}
