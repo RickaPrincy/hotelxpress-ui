@@ -12,12 +12,10 @@ function Search() {
                 <h2 className="text-center pt-2 text-[16px]"><span className="font-bold">Destination Vietnam !</span> Veuillez lire les exigences de voyage actuelles avant de réserver.</h2>
                 <Button className="mt-2 h-[auto]">Lire plus</Button>
             </div>
-            <div className="bg-orange-500 p-4 w-full">
+            <div className="bg-orange-700 p-4 w-full">
                 <SearchBar onSubmit={(values) => console.log("hello")} />
             </div>
-            <div className="w-full flex">
-                <SearchOption />
-            </div>
+            <SearchOption />
         </div>
     );
 }

@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-function useChangeId( key, initialLists = []){
+function useChangeId( key, compare, initialLists = []){
     const [ list, setLists ] = useState(initialLists);
 
     const onChange = ( id, value )=>{
         setLists([...list].map(el=>{
-            return el.id !== id ? el : {...el, [key]:value};
+            return el[compare] !== id ? el : {...el, [key]:value};
         }));
     }
 
