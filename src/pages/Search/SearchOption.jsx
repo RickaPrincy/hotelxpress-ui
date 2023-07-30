@@ -52,9 +52,7 @@ function SearchOption() {
                 />
                 <OptionLists list={searchValue === "" ? list : tempList} onChange={setListById} />
             </div>
-            <div className="w-full h-screen p-5 bg-orange-500">
-                <RoomResult list={list} />
-            </div>
+            <RoomResult list={list} />
         </div>
     );
 }

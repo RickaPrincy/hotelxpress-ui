@@ -1,6 +1,17 @@
 import { Button, DatePicker, Form, Select } from "antd";
+import { SearchFilter } from "../../App";
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 
-function SearchBar({ onSubmit }) {
+function SearchBar() {
+    const navigate = useNavigate();
+    const search = useContext(SearchFilter);
+
+    const onSubmit = (values) => {
+        search.onChange(values);
+        navigate("/search")
+    }
+
     const options = [
         {
             value: "ricka",
@@ -13,9 +24,9 @@ function SearchBar({ onSubmit }) {
     ]
 
     return (
-        <Form className="w-full d-c-c gap-5 m-0 pt-0" onFinish={onSubmit}>
+        <Form className="w-full d-c-c gap-5 m-0 pt-0" initialValues={search} onFinish={onSubmit}>
             <Form.Item className="w-[250px] m-0" name="location">
-                <Select placeholder="Location" size="large" options={options} />
+                <Select placeholder="Location" defaultValue="" size="large" options={options} />
             </Form.Item>
             <Form.Item name="interval" className="m-0">
                 <DatePicker.RangePicker size="large" />

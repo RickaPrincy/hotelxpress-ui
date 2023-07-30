@@ -1,13 +1,14 @@
 import { Route, Routes } from "react-router-dom";
 import Login from "../pages/Login/Login";
-import Search from "../pages/Search/Search";
+import SearchRequire from "../pages/Search/SearchRequire";
+import Home from "../pages/Home/Home";
 
 function Router() {
     return ( 
         <Routes>
-            <Route path="/" element={<h1>Hello</h1>}/>
+            <Route path="/" element={<Home/>}/>
             <Route path="/signin" element={<Login/>}/>
-            <Route path="/search" element={<Search/>}/>
+            <Route path="/search" element={<SearchRequire />}/>
         </Routes>
     );
 }
