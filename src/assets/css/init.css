@@ -9,7 +9,9 @@
 .d-c-c-c{
   @apply flex items-center flex-col justify-center
 }
-
+.bg-hidden{
+  background-color: #000000a9;
+}
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -17,7 +19,7 @@
   background: #f1f1f1;
 }
 ::-webkit-scrollbar-thumb {
-  background: #ff9100;
+  background: #202020;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #555;

@@ -2,6 +2,7 @@ import { AuthProvider } from "react-auth-kit";
 import { BrowserRouter } from "react-router-dom";
 import Router from "./Router/Router";
 import "../src/assets/css/init.css";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
     return (
@@ -11,7 +12,7 @@ function App() {
                 cookieDomain={window.location.hostname}
             >
                 <BrowserRouter>
-                    {/* <Navbar /> */}
+                    <Navbar />
                     <Router />
                 </BrowserRouter>
             </AuthProvider>
