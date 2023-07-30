@@ -1,15 +1,15 @@
 import { useState } from "react";
 
 function useChangeId( key, initialLists = []){
-    const [ list, setlists ] = useState(initialLists);
+    const [ list, setLists ] = useState(initialLists);
 
     const onChange = ( id, value )=>{
-        setlists([...list].map(el=>{
+        setLists([...list].map(el=>{
             return el.id !== id ? el : {...el, [key]:value};
         }));
     }
 
-    return [ list, onChange ];
+    return [ list, setLists, onChange ];
 }
 
 export default useChangeId;
