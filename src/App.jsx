@@ -8,7 +8,6 @@ import { createContext, useState } from "react";
 export const SearchFilter = createContext();
 
 function App() {
-
     const [search,setSearch ] = useState({
         location: null,
         interval: [],
@@ -18,18 +17,7 @@ function App() {
     const onChangeSearch = (values)=>{
         setSearch(values);
     }
-
-    const isNull= ()=>{
-        if( 
-            search.location === null || 
-            search.interval.length === 0 ||
-            search.room_type === null 
-        ){
-            return true;
-        }
-        return false;
-    }
-
+    
     return (
         <>
             <AuthProvider authType={'cookie'}
@@ -37,7 +25,7 @@ function App() {
                 cookieDomain={window.location.hostname}
             >
                 <BrowserRouter>
-                    <SearchFilter.Provider  value={{...search,onChange: onChangeSearch, isNull: isNull}}>
+                    <SearchFilter.Provider  value={{...search,onChange: onChangeSearch}}>
                         <Navbar />
                         <Router />
                     </SearchFilter.Provider>
