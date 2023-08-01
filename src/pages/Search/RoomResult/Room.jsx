@@ -23,7 +23,7 @@ function Room({ room }) {
                     <Rate count={5} style={{ color: "orangered" }} allowHalf defaultValue={2.5} />
                     <p className="text-[14px]">{room.description}</p>
                     <div className="flex items-center justify-between">
-                        <p className="font-semibold m-0 p-0 text-orange-700 text-[25px]">{room.price_per_night}/nuit</p>
+                        <p className="font-semibold m-0 p-0 text-orange-700 text-[25px]">{room.price_per_night}$/nuit</p>
                         <div className="flex items-center gap-5">
                             <Button className="mx-0 p-0 font-semibold text-orange-700" type="link">Plus d'info</Button>
                             <Button type="primary" className="bg-orange-500 hover:bg-orange-600">Reservation</Button>

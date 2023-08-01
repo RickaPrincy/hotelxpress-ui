@@ -2,30 +2,35 @@ import { useContext, useEffect, useState } from "react";
 import { SearchFilter } from "../../../App";
 import axios from "axios";
 import Room from "./Room";
+import RoomNotFound from "./RoomNotFound";
 
 function RoomResult({ list }) {
     const search = useContext(SearchFilter);
     const [list_room, setListRoom] = useState([]);
 
-    useEffect(()=>{
+    useEffect(() => {
         const data = {
             location: search.location,
             arrival: search.interval && search.interval[0] ? search.interval[0].format() : "",
-            departure:  search.interval && search.interval[1] ? search.interval[1].format() : "",
+            departure: search.interval && search.interval[1] ? search.interval[1].format() : "",
             id_room_type: search.room_type,
-            id_options: [...list].filter(el=>el.checked).map(el=>el.id_room_content)
+            id_options: [...list].filter(el => el.checked).map(el => el.id_room_content)
         }
-        axios.post("http://localhost:5000/find/room/options",data)
+        axios.post("http://localhost:5000/find/room/options", data)
             .then(response => {
                 setListRoom(response.data)
             })
-            .catch(error=>console.log(error))
+            .catch(error => console.log(error))
 
-    },[list, search]);
+    }, [list, search]);
 
     return (
         <div className="w-full p-5 shadow">
-            {list_room.map(el=><Room room={el} key={el.id_room}/>)} 
+            {
+                list_room.length > 0 ?
+                list_room.map(el => <Room room={el} key={el.id_room} />)
+                : <RoomNotFound />
+            }
         </div>
     );
 }
