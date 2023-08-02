@@ -18,19 +18,6 @@ function App() {
         setSearch(values);
     };
 
-    const isNull= ()=>{
-        if( 
-            search.location === null || 
-            search.interval.length === 0 ||
-            search.room_type === null 
-        ){
-            return true;
-        }
-        return false;
-    };
-
-    }
-    
     return (
         <>
             <AuthProvider authType={'cookie'}
@@ -46,6 +33,8 @@ function App() {
             </AuthProvider>
         </>
     );
+
 }
+    
 
 export default App;
