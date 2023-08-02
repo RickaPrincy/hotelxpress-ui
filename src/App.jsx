@@ -8,7 +8,6 @@ import Home from "./pages/Home/Home";
 export const SearchFilter = createContext();
 
 function App() {
-
     const [search,setSearch ] = useState({
         location: null,
         interval: [],
@@ -30,6 +29,8 @@ function App() {
         return false;
     };
 
+    }
+    
     return (
         <>
             <AuthProvider authType={'cookie'}
@@ -37,7 +38,7 @@ function App() {
                 cookieDomain={window.location.hostname}
             >
                 <BrowserRouter>
-                    <SearchFilter.Provider  value={{...search,onChange: onChangeSearch, isNull: isNull}}>
+                    <SearchFilter.Provider  value={{...search,onChange: onChangeSearch}}>
                         <Navbar />
                         <Home/>
                     </SearchFilter.Provider>
