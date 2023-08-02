@@ -12,7 +12,7 @@ const partnerLogos = [
 const LogoHotel = () => {
     return (
         <div className="bg-gray-200 py-4 mt-4">
-            <div className="container mx-auto flex justify-center items-center space-x-10 h-32"> {/* Ajoutez la classe h-32 pour définir la hauteur */}
+            <div className="container mx-auto flex justify-center items-center space-x-10 h-32">
                 {partnerLogos.map((logoUrl, index) => (
                     <div
                         key={index}
