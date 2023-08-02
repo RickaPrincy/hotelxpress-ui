@@ -5,14 +5,14 @@ const testimonialsData = [
     {
         id: 1,
         name: 'John Doe',
-        position: 'CEO, Company Inc.',
+        position: 'client',
         comment:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer condimentum odio metus, vitae faucibus sapien pellentesque quis. Donec vel nunc augue. Suspendisse potenti. Sed eu justo in nunc faucibus volutpat sit amet nec velit. Nam eu erat ipsum.",
     },
     {
         id: 2,
         name: 'Jane Smith',
-        position: 'Marketing Manager, ABC Corp.',
+        position: 'client',
         comment:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer condimentum odio metus, vitae faucibus sapien pellentesque quis. Donec vel nunc augue. Suspendisse potenti. Sed eu justo in nunc faucibus volutpat sit amet nec velit. Nam eu erat ipsum.",
     },

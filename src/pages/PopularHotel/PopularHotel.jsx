@@ -2,7 +2,6 @@ import { Card, Col, Row } from 'antd';
 import { HeartOutlined, EnvironmentOutlined } from '@ant-design/icons';
 
 const PopularHotel = () => {
-    // Exemple de données fictives pour les hôtels
     const hotels = [
         {
             id: 1,

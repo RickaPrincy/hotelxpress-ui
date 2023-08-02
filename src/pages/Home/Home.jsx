@@ -14,12 +14,9 @@ const Home = () => {
                 <Navbar />
             </div>
 
-            {/* Conteneur du Header */}
             <div className="flex flex-col items-center justify-center flex-grow">
                 <Header />
             </div>
-
-            {/* Conteneur du SearchBar */}
             <div className="flex justify-center bg-orange-400 p-2 mt-8 mb-8">
                 <SearchBar />
             </div>
