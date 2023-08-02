@@ -9,8 +9,8 @@ function SearchBar() {
 
     const onSubmit = (values) => {
         search.onChange(values);
-        navigate("/search")
-    }
+        navigate("/search");
+    };
 
     const options = [
         {
@@ -21,10 +21,10 @@ function SearchBar() {
             value: "test",
             label: "test"
         }
-    ]
+    ];
 
     return (
-        <Form className="w-full d-c-c gap-5 m-0 pt-0" initialValues={search} onFinish={onSubmit}>
+        <Form className="w-full d-c-c gap-5" initialValues={search} onFinish={onSubmit}>
             <Form.Item className="w-[250px] m-0" name="location">
                 <Select placeholder="Location" defaultValue="" size="large" options={options} />
             </Form.Item>
@@ -35,7 +35,7 @@ function SearchBar() {
                 <Select placeholder="Room Type" size="large" options={options} />
             </Form.Item>
             <Form.Item className="m-0">
-                <Button type="primary" htmlType="submit" className="px-5 h-auto text-[18px] bg-blue-500">C'est Parti</Button>
+                <Button type="primary" htmlType="submit" className="px-5 h-auto text-[18px] bg-blue-500">C est Parti</Button>
             </Form.Item>
         </Form>
     );
