@@ -1,9 +1,9 @@
 import { AuthProvider } from "react-auth-kit";
-import { BrowserRouter } from "react-router-dom";
-import Router from "./Router/Router";
+import { BrowserRouter} from "react-router-dom";
 import "../src/assets/css/init.css";
 import Navbar from "./components/Navbar/Navbar";
 import { createContext, useState } from "react";
+import Home from "./pages/Home/Home";
 
 export const SearchFilter = createContext();
 
@@ -17,7 +17,7 @@ function App() {
 
     const onChangeSearch = (values)=>{
         setSearch(values);
-    }
+    };
 
     const isNull= ()=>{
         if( 
@@ -28,7 +28,7 @@ function App() {
             return true;
         }
         return false;
-    }
+    };
 
     return (
         <>
@@ -39,7 +39,7 @@ function App() {
                 <BrowserRouter>
                     <SearchFilter.Provider  value={{...search,onChange: onChangeSearch, isNull: isNull}}>
                         <Navbar />
-                        <Router />
+                        <Home/>
                     </SearchFilter.Provider>
                 </BrowserRouter>
             </AuthProvider>
