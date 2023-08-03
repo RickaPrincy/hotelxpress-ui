@@ -26,7 +26,7 @@ function App() {
             >
                 <BrowserRouter>
                     <SearchFilter.Provider  value={{...search,onChange: onChangeSearch}}>
-                        <Navbar />
+                        <Navbar/>
                         <Home/>
                     </SearchFilter.Provider>
                 </BrowserRouter>

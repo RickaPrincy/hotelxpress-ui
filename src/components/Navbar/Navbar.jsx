@@ -25,13 +25,13 @@ const Navbar = () => {
                 {!isMobile && (
                     <div className="hidden md:flex space-x-4">
                         <Menu theme='black' mode="horizontal" defaultSelectedKeys={['1']} style={{ lineHeight: '40px', border: 'none' }}>
-                            <Menu.Item key="1" icon={<HomeOutlined />}style={{ backgroundColor: 'transparent' }} className="text-orange-500">
+                            <Menu.Item key="1" icon={<HomeOutlined />} style={{ backgroundColor: 'transparent' }} className="text-orange-500">
                                 <a className='hover:text-white' href="#home">Home</a>
                             </Menu.Item>
-                            <Menu.Item key="2" icon={<UserOutlined />}style={{ backgroundColor: 'transparent' }} className="text-orange-500">
+                            <Menu.Item key="2" icon={<UserOutlined />} style={{ backgroundColor: 'transparent' }} className="text-orange-500">
                                 <a className='hover:text-white' href="#hotel">Hotel</a>
                             </Menu.Item>
-                            <Menu.Item key="3" icon={<UserOutlined />}style={{ backgroundColor: 'transparent' }} className="text-orange-500 ">
+                            <Menu.Item key="3" icon={<UserOutlined />} style={{ backgroundColor: 'transparent' }} className="text-orange-500 ">
                                 <a className='hover:text-white' href="#room">Room</a>
                             </Menu.Item>
                             <Menu.Item key="4" icon={<PhoneOutlined />} style={{ backgroundColor: 'transparent' }}className="text-orange-500">
@@ -79,5 +79,4 @@ const Navbar = () => {
         </nav>
     );
 };
-
 export default Navbar;

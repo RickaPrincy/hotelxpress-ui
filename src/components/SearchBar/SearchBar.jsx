@@ -33,6 +33,7 @@ function SearchBar() {
                 <Select
                     placeholder="Location"
                     size="large"
+                    allowClear
                     options={[{ value: "", label: "Tous" }, ...searchList.locations.map(el => ({ value: el.state, label: el.state }))]}
                 />
             </Form.Item>
@@ -43,6 +44,7 @@ function SearchBar() {
                 <Select
                     placeholder="Room Type"
                     size="large"
+                    allowClear
                     options={[{ value: 0, label: "Tous" }, ...searchList.room_types.map(el => ({ value: el.id_room_type, label: el.type }))]}
                 />
             </Form.Item>
