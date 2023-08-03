@@ -1,9 +1,9 @@
 import { AuthProvider } from "react-auth-kit";
 import { BrowserRouter} from "react-router-dom";
-import "../src/assets/css/init.css";
-import Navbar from "./components/Navbar/Navbar";
 import { createContext, useState } from "react";
-import Home from "./pages/Home/Home";
+import Router from "./Router/Router";
+import NavbarCheck from "./components/Navbar/NavbarCheck";
+import "../src/assets/css/init.css";
 
 export const SearchFilter = createContext();
 
@@ -25,9 +25,9 @@ function App() {
                 cookieDomain={window.location.hostname}
             >
                 <BrowserRouter>
-                    <SearchFilter.Provider  value={{...search,onChange: onChangeSearch}}>
-                        <Navbar/>
-                        <Home/>
+                    <SearchFilter.Provider  value={{...search, onChange: onChangeSearch}}>
+                        <NavbarCheck/>
+                        <Router/>
                     </SearchFilter.Provider>
                 </BrowserRouter>
             </AuthProvider>

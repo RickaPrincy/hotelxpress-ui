@@ -1,9 +1,9 @@
-import "./Login.css";
 import { Input, Switch, Button, Form } from "antd";
 import { MailOutlined, LockOutlined } from "@ant-design/icons";
 import { useSignIn } from "react-auth-kit";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import "./Login.css";
 
 function Login() {
     const signIn = useSignIn();
@@ -56,7 +56,7 @@ function Login() {
                         <Form.Item name="remember" className="my-0 me-3" valuePropName="checked">
                             <Switch id="remember" className="bg-slate-500 " />
                         </Form.Item>
-                        <label htmlFor="remember" className="cursor-pointer">Remember me</label> 
+                        <label htmlFor="remember" className="cursor-pointer">Souvenez de Moi</label> 
                     </div>
                     <Form.Item className="mx-auto w-[fit-content] mt-3">
                         <Button type="primary" htmlType="submit" className="px-5 h-auto text-[18px] bg-blue-500">Submit</Button>

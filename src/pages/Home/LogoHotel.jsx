@@ -6,10 +6,10 @@ const partnerLogos = [
     'https://upload.wikimedia.org/wikipedia/fr/thumb/e/ef/Radisson_Blu_logo.svg/1280px-Radisson_Blu_logo.svg.png',
     'https://www.mantasaly.com/app/themes/mantasaly/assets/images/logo.png',
     'https://www.sainte-marie-hotel.com/wp-content/uploads/2018/05/logo-lakana-hotel-sainte-marie.png',
-    'https://www.zomatel-madagascar.com/static/media/logo.3f7cc167a0bfa657d072.png',
-    
+    'https://www.zomatel-madagascar.com/static/media/logo.3f7cc167a0bfa657d072.png'
 ];
-const LogoHotel = () => {
+
+function LogoHotel(){
     return (
         <div className="bg-gray-200 py-4 mt-4">
             <div className="container mx-auto flex justify-center items-center space-x-10 h-32">

@@ -1,28 +1,62 @@
 import { Carousel } from 'antd';
+import { Link } from 'react-router-dom';
 
-const Header = () => {
-    
+function Header() {
     const carouselImages = [
-        { id: 1, imageUrl: 'https://www.booking-hotel-madagascar.com/wp-content/uploads/2018/01/Le-Grand-Hotel-1-1108x600.jpg' },
-        { id: 2, imageUrl: 'https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_627,q_auto,w_1200/itemimages/65/28/6528066.jpeg' },
-        { id: 3, imageUrl: 'https://www.sainte-marie-hotel.com/wp-content/uploads/2018/05/lakana-ponton-de-nuit.jpg' },
-     
+        {
+            id: 1,
+            imageUrl: "carrousel1.jpg",
+            title: { h1: "Bienvenue chez", span: "HotelXpress" },
+            subtitle: "Vous Verer ici tous vos hotels préférer",
+            button: "Voir Hotels",
+            link: "/hotel"
+        },
+        {
+            id: 2,
+            imageUrl: "carrousel2.jpg",
+            title: { h1: "Devenez un membre", span: "Fidèle" },
+            subtitle: "Inscriver vous maintenant et recever des reductions de prix",
+            button: "S'inscrire",
+            link: "/signin"
+        },
+        {
+            id: 3,
+            imageUrl: "carrousel3.jpg",
+            title: { h1: "Visiter nos chambres par", span: "Catégories" },
+            subtitle: "Inscriver vous maintenant et recever des reductions de prix",
+            button: "Voir Chambres",
+            link: "/room"
+        }
     ];
-  
+
     return (
-        <div className="w-full h-[50vh]">
-            <Carousel autoplay>
-                {carouselImages.map((image) => (
-                    <div key={image.id} className="w-full h-auto flex items-center justify-center">
-                        <img src={image.imageUrl} alt={`Image ${image.id}`} className="h-[50vh] w-full"/>
+        <div className="w-full h-[75vh]">
+            <Carousel autoplay pauseOnHover={false} autoplaySpeed={5000} speed={1500}>
+                {carouselImages.map(el => (
+                    <div
+                        key={el.id}
+                        className={`w-full h-[75vh]`}
+                    >
+                        <div style={{ backgroundImage: `url(${el.imageUrl}` }} className="bg-cover p-0 w-sreen h-[75vh] ">
+                            <div className="d-c-c w-full h-[75vh] bg-hidden flex-col">
+                                <h1 className="text-[35px] text-center m-0 text-white font-bold">
+                                    {el.title.h1}
+                                    <span className="text-orange-600 ms-2">{el.title.span}</span>
+                                </h1>
+                                <p className="text-gray-200 text-[25px] m-0 text-center">{el.subtitle}</p>
+                                <button className="px-5 py-2 rounded mt-3 text-white font-bold text-[18px] bg-orange-700">
+                                    <Link to={el.link}>{el.button}</Link>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 ))}
             </Carousel>
-        </div> 
+        </div>
     );
 };
-  
+
 export default Header;
-  
+
 
 

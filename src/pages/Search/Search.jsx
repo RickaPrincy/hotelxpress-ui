@@ -6,7 +6,7 @@ import SearchOption from "./SearchOption";
 
 function Search() {
     return (
-        <div className="w-full pt-5 mt-5">
+        <div className="w-full pt-5 mt-[40px]">
             <div className="w-full bg-blue-100 gap-5 d-c-c p-4">
                 <GiftFilled className="text-blue-800 text-4xl m-0 p-0" />
                 <h2 className="text-center pt-2 text-[16px]"><span className="font-bold">Destination Vietnam !</span> Veuillez lire les exigences de voyage actuelles avant de réserver.</h2>
