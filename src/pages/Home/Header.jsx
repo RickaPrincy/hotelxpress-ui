@@ -10,11 +10,11 @@ const Header = () => {
     ];
   
     return (
-        <div className="w-full h-50">
+        <div className="w-full h-[50vh]">
             <Carousel autoplay>
                 {carouselImages.map((image) => (
                     <div key={image.id} className="w-full h-auto flex items-center justify-center">
-                        <img src={image.imageUrl} alt={`Image ${image.id}`} className="h-30 w-full"/>
+                        <img src={image.imageUrl} alt={`Image ${image.id}`} className="h-[50vh] w-full"/>
                     </div>
                 ))}
             </Carousel>
