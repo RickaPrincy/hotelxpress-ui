@@ -1,10 +1,10 @@
 import Navbar from '../../components/Navbar/Navbar';
 import SearchBar from "../../components/SearchBar/SearchBar";
-import Header from '../Header/Header'; 
-import LogoHotel from '../Logo Partner/LogoHotel';
-import PopularHotel from '../PopularHotel/PopularHotel';
-import Promotion from '../Promotion/Promotion';
-import Testimonials from '../Testimonial/Testimonial';
+import Header from './Header'; 
+import LogoHotel from './LogoHotel';
+import PopularHotel from './PopularHotel';
+import Promotion from './Promotion';
+import Testimonials from './Testimonial';
 
 const Home = () => {
     return (
