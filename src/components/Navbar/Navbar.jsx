@@ -13,7 +13,9 @@ function Navbar() {
 
     return (
         <nav className="fixed w-full z-[999] top-0 flex items-center justify-between left-0 bg-gray-800 p-3">
-            <img src="logo.png" alt="HotelXpress" className="w-15 h-12" />
+            <Link to={"/"}>
+                <img src="logo.png" alt="HotelXpress" className="w-15 h-12" />
+            </Link>
             <Menu
                 theme="black"
                 mode="horizontal"
