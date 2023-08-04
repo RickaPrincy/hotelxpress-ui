@@ -6,7 +6,7 @@ function Room({ room }) {
         <div className="p-0 border-[1px] mb-3 border-solid border-gray-500 overflow-hidden rounded-[5px] mb-2 mx-0 mt-0">
             <div className="py-2 px-5 gap-5 bg-gradient-to-r flex items-center to-orange-500 from-orange-900">
                 <ClockCircleFilled className="text-white text-[25px] font-bold" />
-                <h1 className="font-bold text-white">{room.type}</h1>
+                <h1 className="font-bold text-white">{room.room_type.type}</h1>
             </div>
             <div className="flex m-0 p-0">
                 <Image src={room.room_url_img} width={400} height={230} />
@@ -15,7 +15,7 @@ function Room({ room }) {
                         <div className="flex items-center">
                             <h1 className="font-semibold text-[22px]">{room.room_name}</h1>
                             <EnvironmentFilled className="text-[18px] ms-3 me-1 text-orange-700" />
-                            <p className="text-orange-700">{room.city}</p>
+                            <p className="text-orange-700">{room.hotel.city}</p>
                         </div>
                         <HeartOutlined className="me-2 text-[25px] text-orange-400 cursor-pointer" />
                     </div>
