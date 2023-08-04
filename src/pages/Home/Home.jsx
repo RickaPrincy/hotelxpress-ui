@@ -1,5 +1,7 @@
 import Navbar from '../../components/Navbar/Navbar';
 import SearchBar from "../../components/SearchBar/SearchBar";
+import ContactUs from './ContactUs';
+import CopyrightMessage from './CopyrightMessage';
 import Header from './Header';
 import LogoHotel from './LogoHotel';
 import PopularHotel from './PopularHotel';
@@ -16,6 +18,8 @@ const Home = () => {
             <PopularHotel />
             <LogoHotel />
             <Testimonial />
+            <ContactUs/>
+            <CopyrightMessage/>
         </div>
     );
 };

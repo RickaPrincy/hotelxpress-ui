@@ -10,7 +10,7 @@ function Testimonial(){
     useEffect(() => {
         axios.get("http://localhost:5000/testimonials")
             .then(response => setTestimonials(response.data))
-            .catch(error => console.log(error))
+            .catch(error => console.log(error));
     }, []);
 
     const settings = {
@@ -57,7 +57,7 @@ function Testimonial(){
             </div>
         </div>
     );
-};
+}
   
 export default Testimonial;
     

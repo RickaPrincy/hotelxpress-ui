@@ -9,7 +9,7 @@ function PopularHotel(){
     useEffect(() => {
         axios.get("http://localhost:5000/rooms")
             .then(response => setRooms(response.data))
-            .catch(error => console.log(error))
+            .catch(error => console.log(error));
     }, []);
 
     return (
@@ -45,6 +45,6 @@ function PopularHotel(){
             </Row>
         </div>
     );
-};
+}
 
 export default PopularHotel;

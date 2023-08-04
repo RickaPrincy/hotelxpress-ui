@@ -1,4 +1,3 @@
-import React from 'react';
 import { HomeOutlined, PhoneOutlined, UserOutlined } from '@ant-design/icons';
 import { Menu } from 'antd';
 import { Link } from 'react-router-dom';
@@ -9,7 +8,7 @@ function Navbar() {
         { key: 2, icon: <UserOutlined />, label: <Link to={"/Hotel"}>Hotel</Link> },
         { key: 3, icon: <UserOutlined />, label: <Link to={"/Room"}>Room</Link> },
         { key: 4, icon: <PhoneOutlined />, label: <Link to={"/contact"}>Contact</Link> },
-    ]
+    ];
 
     return (
         <nav className="fixed w-full z-[999] top-0 flex items-center justify-between left-0 bg-gray-800 p-3">
@@ -33,5 +32,5 @@ function Navbar() {
             </div>
         </nav>
     );
-};
+}
 export default Navbar;
