@@ -7,7 +7,7 @@ function ProfilePrivate() {
 
     return (  
         <>
-            {isAuthentificate ? <Profile /> : <Navigate to={"/signin"}/>} 
+            {isAuthentificate() ? <Profile /> : <Navigate to={"/signin"}/>} 
         </>
     );
 }

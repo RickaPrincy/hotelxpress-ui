@@ -4,6 +4,7 @@ import { useSignIn } from "react-auth-kit";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Login.css";
+import Cookies from "js-cookie";
 
 function Login() {
     const signIn = useSignIn();
@@ -17,18 +18,18 @@ function Login() {
                     expiresIn: 3600,
                     tokenType: "Bearer",
                 })) {
-                    alert("connecter");
+                    Cookies.set("token", response.data.token);
                     navigate("/");
                 }
                 else {
-                    alert("wrong information")
+                    alert("wrong information");
                 }
             })
             .catch(error => alert("failed to login"));
     }
 
     return (
-        <div className="w-full m-0 h-screen d-c-c flex-col bg-hidden p-10">
+        <div className="w-full m-0 h-screen d-c-c flex-col bg-[url('background.jpg')]  p-10">
             <div className="rounded-[5px] bg-white w-[fit-content] text-2xl p-7 box-shadow">
                 <h1 className="font-bold p-3 mb-7 text-center">Signin</h1>
                 <Form name="logInformation" onFinish={handlerSubmit}>

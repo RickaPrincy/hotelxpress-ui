@@ -1,7 +1,16 @@
+import { useEffect, useState } from "react";
 import CountList from "./CountList";
 import InformationList from "./InformationList";
+import axios from "axios";
 
 function UserProfile() {
+    const [userInfo, setUserInfo] = useState();
+    
+    // useEffect(()=>{
+    //     axios.get("http://localhost:5000/user",)
+
+    // },[]);
+
     return (
         <div className="w-[calc(100% - 270px)] ml-[250px] ">
             <div className="bg-gray-100 p-5 mt-[0px] flex gap-[10px]">
