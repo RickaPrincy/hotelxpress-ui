@@ -7,7 +7,7 @@ function PopularHotel(){
     const [rooms, setRooms] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:5000/rooms")
+        axios.get("http://localhost:5000/find/room/6")
             .then(response => setRooms(response.data))
             .catch(error => console.log(error))
     }, []);
@@ -33,7 +33,7 @@ function PopularHotel(){
                             </div>
                             <div className="flex items-center mt-2">
                                 <EnvironmentOutlined className="text-blue-500 mr-2" />
-                                <p className="text-gray-600">{el.city}</p>
+                                <p className="text-gray-600">{el.hotel.city}</p>
                             </div>
                             <div className="flex items-center mt-4">
                                 <p className="text-gray-600">{el.description}</p>

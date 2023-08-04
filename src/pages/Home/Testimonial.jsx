@@ -2,13 +2,14 @@ import { Carousel, Avatar } from 'antd';
 import { GitlabOutlined } from '@ant-design/icons';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { v4 as uuid } from 'uuid';
 
 function Testimonial(){
 
     const [testimonials, setTestimonials] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:5000/testimonials")
+        axios.get("http://localhost:5000/find/hotel_feedback/4")
             .then(response => setTestimonials(response.data))
             .catch(error => console.log(error))
     }, []);
@@ -34,16 +35,15 @@ function Testimonial(){
                 </div>
                 <Carousel {...settings}>
                     {testimonials.map(testimonial => (
-                        <div key={testimonial.id_give_hotel_feedback} className="px-4 py-8 ">
-                            <div className="bg-white p-4 shadow-xl rounded-lg flex border border-gray-200">
-                                <div className="mr-6 flex-shrink-0">
-                                    <Avatar size={120} src={testimonial.user.profile_url_img} 
+                        <div key={uuid()} className="px-4 py-8 ">
+                            <div className="bg-white p-4 shadow-xl justify-center flex-col rounded-lg flex border border-gray-200">
+                                <div className="flex-shrink-0 d-c-c flex-col">
+                                    <Avatar size={120} src={testimonial.user.profil_url_img} 
                                         className="border-dashed border-orange-500 border-4 rounded-full"                               
                                     />
-                                    <p className="mt-6 text-black-600 font-semibold text-center">
+                                    <p className="my-3 text-black-600 font-semibold text-center">
                                         {testimonial.user.first_name}
                                     </p>
-                                    <p className="text-gray-600 text-center">{testimonial.note}</p>
                                 </div>
                                 <div className='flex items-center justify-center'>
                                     <p className="text-lg mb-4 italic">

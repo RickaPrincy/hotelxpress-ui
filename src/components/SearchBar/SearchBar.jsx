@@ -14,10 +14,7 @@ function SearchBar() {
 
     useEffect(() => {
         axios.get("http://localhost:5000/search")
-            .then(response => setSearchList({
-                locations: response.data.locations,
-                room_types: response.data.room_types
-            }))
+            .then(response => setSearchList(response.data))
             .catch(error => console.log(error));
     }, []);
 
@@ -33,7 +30,7 @@ function SearchBar() {
                     placeholder="Location"
                     size="large"
                     allowClear
-                    options={[{ value: "", label: "Tous" }, ...searchList.locations.map(el => ({ value: el.state, label: el.state }))]}
+                    options={[{ value: "", label: "Tous" }, ...searchList.locations.map(el => ({ value: el, label: el }))]}
                 />
             </Form.Item>
             <Form.Item name="interval" className="m-0">
