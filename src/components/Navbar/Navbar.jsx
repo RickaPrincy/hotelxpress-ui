@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { HomeOutlined, PhoneOutlined, UserOutlined } from '@ant-design/icons';
 import { Menu } from 'antd';
 import { Link } from 'react-router-dom';
 import { useIsAuthenticated } from 'react-auth-kit';
 import axios from 'axios';
 import Cookies from 'js-cookie';
+import { UserInfo } from '../../Context/UserInformation';
 
 function Navbar() {
     const isAuthentificate = useIsAuthenticated();
-    const [user, setUser] = useState({});
+    const user = useContext(UserInfo);
 
     const navLinks = [
         { key: 1, icon: <HomeOutlined />, label: <Link to={"/"}>Home</Link> },
@@ -18,14 +19,14 @@ function Navbar() {
     ]
 
     useEffect(() => {
-        if (isAuthentificate()) {
+        if (isAuthentificate() && !user.user) {
             axios.get(
                 "http://localhost:5000/find/user",
                 {
                     headers: { Authorization: Cookies.get("token") }
                 }
             )
-                .then(response => setUser(response.data))
+                .then(response => user.toggleUser(response.data))
                 .catch(error => console.log(error))
         }
     }, []);
@@ -47,7 +48,7 @@ function Navbar() {
                     isAuthentificate() ?
                         <div className="d-c-c cursor-pointer p-1 bg-orange-800 bg-overflow-hidden rounded-[50%]">
                             <Link to={"/profile"}>
-                                <img src={user.profil_url_img} className="rounded-[50%] w-[60px] h-[60px]" alt="Your profile" />
+                                <img src={user.user?.profil_url_img} className="rounded-[50%] w-[60px] h-[60px]" alt="Your profile" />
                             </Link>
                         </div>
                         :

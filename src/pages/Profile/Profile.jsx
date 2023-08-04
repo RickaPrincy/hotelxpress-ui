@@ -6,8 +6,8 @@ import UserProfile from "./UserProfile/UserProfile";
 function Profile() {
     return (  
         <div>
-            <LeftBar/>
-            <TopBar/>
+            <LeftBar />
+            <TopBar />
             <Routes>
                 <Route path="/" element={<UserProfile />} />
             </Routes>
