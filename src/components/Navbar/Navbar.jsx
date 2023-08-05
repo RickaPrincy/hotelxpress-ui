@@ -48,7 +48,7 @@ function Navbar() {
                     isAuthentificate() ?
                         <div className="d-c-c cursor-pointer p-1 bg-orange-800 bg-overflow-hidden rounded-[50%]">
                             <Link to={"/profile"}>
-                                <img src={user.user?.profil_url_img} className="rounded-[50%] w-[60px] h-[60px]" alt="Your profile" />
+                                <img src={user.user?.profil_url_img} className="rounded-[50%] w-[40px] h-[40px]" alt="Your profile" />
                             </Link>
                         </div>
                         :

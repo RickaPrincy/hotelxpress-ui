@@ -9,7 +9,7 @@ function PopularHotel(){
     useEffect(() => {
         axios.get("http://localhost:5000/find/room/6")
             .then(response => setRooms(response.data))
-            .catch(error => console.log(error))
+            .catch(error => console.log(error));
     }, []);
 
     return (

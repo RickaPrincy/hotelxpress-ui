@@ -1,4 +1,4 @@
-import { Carousel, Avatar } from 'antd';
+import { Carousel, Avatar, message } from 'antd';
 import { GitlabOutlined } from '@ant-design/icons';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -11,7 +11,7 @@ function Testimonial(){
     useEffect(() => {
         axios.get("http://localhost:5000/find/hotel_feedback/4")
             .then(response => setTestimonials(response.data))
-            .catch(error => console.log(error))
+            .catch(error => message.error("Une erreur s'est produite", 3))
     }, []);
 
     const settings = {

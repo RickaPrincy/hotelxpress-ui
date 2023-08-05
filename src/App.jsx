@@ -5,6 +5,7 @@ import Router from "./Router/Router";
 import NavbarCheck from "./components/Navbar/NavbarCheck";
 import "../src/assets/css/init.css";
 import UserInformation from "./Context/UserInformation";
+import { FloatButton } from "antd";
 
 export const SearchFilter = createContext();
 
@@ -27,6 +28,7 @@ function App() {
             >
                 <BrowserRouter>
                     <SearchFilter.Provider value={{ ...search, onChange: onChangeSearch }}>
+                        <FloatButton.BackTop/>
                         <UserInformation>
                             <NavbarCheck/>
                             <Router />
