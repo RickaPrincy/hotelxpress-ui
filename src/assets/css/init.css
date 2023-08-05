@@ -5,7 +5,9 @@
 .d-c-c{
   @apply flex items-center justify-center
 }
-
+body{
+  background-color: rgb(229, 235, 235) !important;
+}
 .d-c-c-c{
   @apply flex items-center flex-col justify-center
 }
