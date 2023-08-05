@@ -6,7 +6,7 @@ function LeftLink({ children, text, to }) {
     return (
         <li
             className={ location.pathname === to ? "font-bold" : "text-white" }>
-            <Link to={to} className="flex gap-5 items-center">
+            <Link to={to} className="flex gap-5 items-center hover:bg-orange-900 p-2 rounded-md">
                 {children}
                 <span className="text-[16px]">{text}</span>
             </Link>
