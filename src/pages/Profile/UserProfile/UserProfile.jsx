@@ -7,8 +7,8 @@ function UserProfile() {
     const user = useContext(UserInfo);
 
     return (
-        <div className="w-[calc(100% - 270px)] ml-[250px] ">
-            <div className="bg-gray-100 p-5 mt-[0px] flex gap-[10px] ">
+        <div className="w-full">
+            <div className="bg-gray-100 mt-[0px] flex gap-[10px] ">
                 <div className="rounded-[15px] p-5 bg-white w-[400px] shadow-lg">
                     <div className="w-full">
                         <img src={ user.user.profil_url_img } alt="Your photo" className="w-full h-[250px] mx-auto" />
