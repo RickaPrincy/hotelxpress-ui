@@ -42,7 +42,7 @@ function LeftBar() {
                 </LeftLink>
             </ul>
             <div className="flex items-center gap-4 mb-3 cursor-pointer " onClick={handlerSignOut}>
-                <h2 className="mt-2">
+                <h2 className="m-0">
                     <LogoutOutlined />
                 </h2>
                 <h2 className="mt-2">Déconnecter</h2>
