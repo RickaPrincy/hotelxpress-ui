@@ -40,7 +40,6 @@ function Signup() {
     ]
 
     const handleSubmit = (values) => {
-        console.log(values);
         axios.post("http://localhost:5000/signup", values)
             .then(response => {
                 if (signIn({

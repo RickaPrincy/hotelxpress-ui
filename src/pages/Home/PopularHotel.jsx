@@ -1,4 +1,4 @@
-import { Card, Col, Image, Row } from 'antd';
+import { Card, Col, Image, Row, message } from 'antd';
 import { HeartOutlined, EnvironmentOutlined, GitlabOutlined } from '@ant-design/icons';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -9,7 +9,7 @@ function PopularHotel(){
     useEffect(() => {
         axios.get("http://localhost:5000/find/room/6")
             .then(response => setRooms(response.data))
-            .catch(error => console.log(error));
+            .catch(error => message.error("Erreur de connexion"));
     }, []);
 
     return (

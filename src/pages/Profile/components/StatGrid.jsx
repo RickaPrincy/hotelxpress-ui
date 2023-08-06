@@ -29,7 +29,6 @@ function StatGrid() {
       { icon: <CommentOutlined/>, count: UserInformation.user.give_hotel_feedbacks.length, text: "Commentaire sur les chambres", color: "text-yellow-600" },
       { icon: <CommentOutlined/>, count: UserInformation.user.give_room_feedbacks.length, text: "Commentaire sur les hotels", color: "text-yellow-600" },
     );
-    console.log(UserInformation.user);
   }
 
   return (
