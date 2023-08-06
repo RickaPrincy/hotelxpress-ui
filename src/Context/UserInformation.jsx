@@ -9,8 +9,12 @@ function UserInformation({children}) {
         setUser(values);
     }
 
+    const isAdmin = ()=>{
+        return user && user.id_user_type === 2;
+    }
+
     return ( 
-        <UserInfo.Provider value={{user, toggleUser}}>
+        <UserInfo.Provider value={{user, toggleUser,isAdmin}}>
             {children}
         </UserInfo.Provider>
     );
