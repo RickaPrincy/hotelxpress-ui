@@ -8,12 +8,12 @@ function RecentBook() {
   ]
   return (
     <div className="bg-white shadow-md w-2/3 p-4 mt-5 h-96 overflow-hidden overflow-y-scroll ">
-      <h1 className="font-bold text-2xl p-2">Recent Booking</h1>
+      <h1 className="font-bold text-2xl p-2">Réservation récente</h1>
       <div className="font-bold border-b-2 p-4 flex gap-24">
-        <span>User</span>
-        <span>Date_book</span>
+        <span>Utilisateur</span>
+        <span>Date</span>
         <span>Hotel</span>
-        <span>Room_type</span>
+        <span>Type chambre</span>
       </div>
       {
         values.map((el, index) => {
