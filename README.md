@@ -1,20 +1,32 @@
-# HotelXpress
+# HotelXpress_UI
 
----
+This is simple interface foe HotelXPress 
 
-## Getting started
-you just need to follow the steps.
+# Getting started
 
-## Run the server locally
-
+- Install all dependeces with 
 ```sh
-npm run dev
+npm install  
 ```
-click on the link localhost with the key `ctrl`
 
-## Here we have a User you can use
+- That was all you need to do, now run the project with :
 
 ```sh
-email: Boto@gmail.com
+npm start 
+```
+
+### Two User that you can use ( you can create your own user )
+
+- Admin User
+
+```sh
+email: boto@gmail.com
+password: 1234
+```
+
+- Customer User
+
+```sh
+email: john@gmail.com
 password: 1234
 ```

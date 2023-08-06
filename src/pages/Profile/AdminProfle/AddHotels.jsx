@@ -4,7 +4,6 @@ function AddHotels() {
             <span className="flex justify-center p-4 font-bold text-2xl">Ajouter Hotel</span>
             <div className="flex flex-col gap-6 justify-center items-center">
                 <div className="flex flex-row">
-                    {/* tsy ampy an le id_hotel sy id_room_type*/}
                     <form className="flex flex-col text-sm gap-6 justify-center items-center">
                         <input type="text" placeholder="Nom" className=' outline-none w-2/3 p-4 border-b-2 border-orange-600' />
                         <input type="text" placeholder='Pays' className=' outline-none w-2/3 p-4 border-b-2 border-orange-600' />
@@ -21,4 +20,4 @@ function AddHotels() {
     )
 }
 
-export default AddHotels
+export default AddHotels;
