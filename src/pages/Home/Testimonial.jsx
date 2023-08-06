@@ -27,7 +27,7 @@ function Testimonial(){
     return (
         <div className="py-6 mt-20">
             <div className="container mx-auto">
-                <h2 className="text-3xl font-bold text-center mb-1 font-serif">What People Say</h2>
+                <h2 className="text-3xl font-bold text-center mb-1 font-serif">Ce que les gens disent</h2>
                 <div className="flex items-center justify-center mb-4">
                     <hr className="flex-grow border-t border-gray-500 mr-1 max-w-[20px]"/>
                     <GitlabOutlined className="text-2xl text-gray-500" />
@@ -39,7 +39,7 @@ function Testimonial(){
                             <div className="bg-white p-4 shadow-xl justify-center flex-col rounded-lg flex border border-gray-200">
                                 <div className="flex-shrink-0 d-c-c flex-col">
                                     <Avatar size={120} src={testimonial.user.profil_url_img} 
-                                        className="border-dashed border-orange-500 border-4 rounded-full"                               
+                                        className="border-dashed border-orange-500 border-4 rounded-full"
                                     />
                                     <p className="my-3 text-black-600 font-semibold text-center">
                                         {testimonial.user.first_name}

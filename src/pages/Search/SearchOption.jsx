@@ -43,7 +43,7 @@ function SearchOption() {
     return (
         <div className="w-full flex">
             <div className="w-[350px] p-5 bg-gray-100 h-screen">
-                <h2 className="font-bold text-center mb-5 text-[18px]">Search Options</h2>
+                <h2 className="font-bold text-center mb-5 text-[18px]">Options obligatiores</h2>
                 <Input.Search
                     size="large"
                     placeholder="Ex: Wifi"

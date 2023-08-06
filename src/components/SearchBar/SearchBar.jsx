@@ -27,7 +27,7 @@ function SearchBar() {
         <Form className="w-full d-c-c gap-2 p-2" initialValues={search} onFinish={onSubmit}>
             <Form.Item className="w-[250px] m-0" name="location">
                 <Select
-                    placeholder="Location"
+                    placeholder="Lieu"
                     size="large"
                     allowClear
                     options={[{ value: "", label: "Tous" }, ...searchList.locations.map(el => ({ value: el, label: el }))]}
@@ -38,7 +38,7 @@ function SearchBar() {
             </Form.Item>
             <Form.Item className="w-[250px] m-0" name="room_type">
                 <Select
-                    placeholder="Room Type"
+                    placeholder="Type de Chambre"
                     size="large"
                     allowClear
                     options={[{ value: 0, label: "Tous" }, ...searchList.room_types.map(el => ({ value: el.id_room_type, label: el.type }))]}
