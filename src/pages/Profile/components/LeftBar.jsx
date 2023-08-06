@@ -28,7 +28,7 @@ function LeftBar() {
                 <LeftLink to={"/profile"} text={"Profile"}>
                     <UserOutlined className="m-0 font-[500]" />
                 </LeftLink>
-                <LeftLink to={"/profile/admin"} text={"Reservations"}>
+                <LeftLink to={"/profile/reservation"} text={"Reservations"}>
                     <CalendarFilled className="m-0 font-[500]" />
                 </LeftLink>
                 <LeftLink to={"/profile/favoris"} text={"Favoris"}>
@@ -41,7 +41,7 @@ function LeftBar() {
                     <HeartFilled className="m-0 font-[500]" />
                 </LeftLink>
             </ul>
-            <div className="flex items-center gap-4 mb-3 text-white cursor-pointer " onClick={handlerSignOut}>
+            <div className="flex items-center text-white gap-4 mb-5 cursor-pointer " onClick={handlerSignOut}>
                 <h2 className="m-0">
                     <LogoutOutlined />
                 </h2>

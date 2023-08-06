@@ -14,7 +14,7 @@ function Profile() {
             <div className="w-[calc(100%-270px) ms-[250px] p-5">
                 <Routes>
                     <Route path="/" element={<UserProfile />} />
-                    <Route path="/admin" element={<AdminProfile />} />
+                    <Route path="/reservation" element={<AdminProfile />} />
                     <Route path="/rooms" element={<AddRoom />} />
                     <Route path="/Hotels" element={<AddHotels />} />
                 </Routes>
