@@ -19,7 +19,7 @@ function StatGrid() {
     values.push(
       { icon: <BookOutlined />, count: stats.reservationsCount, text: "Reservations", color: "text-red-600" },
       { icon: <UserOutlined />, count: stats.userCount, text: "Nombre d'utilisateurs", color: "text-green-600" },
-      { icon: <MoneyCollectOutlined />, count: stats.total_pay, text: "Argent Total", color: "text-yellow-600" },
+      { icon: <MoneyCollectOutlined />, count: stats.totalMoney, text: "Argent Total", color: "text-yellow-600" },
       { icon: <SmileOutlined />, count: stats.roomCount, text: "Nombre de chambre", color: "text-orange-600" },
     );
   } else {

@@ -29,7 +29,7 @@ function Signin() {
     }
 
     return (
-        <div className="w-full m-0 h-screen">
+        <div className="w-full m-0 h-screen bg-[url('http://localhost:5000/public/carrousel3.jpg')]">
             <div className="w-full m-0 p-0 bg-hidden d-c-c flex-col h-full">
                 <div className="rounded-[5px] bg-white w-[fit-content] text-2xl p-7 box-shadow">
                     <h1 className="font-bold p-3 mb-7 text-center">Se connecter</h1>
