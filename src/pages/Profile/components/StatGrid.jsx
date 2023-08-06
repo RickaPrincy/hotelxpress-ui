@@ -11,7 +11,7 @@ function StatGrid() {
       {
         values.map((el, index) => {
           return (
-            <div className='bg-white shadow-md rounded-lg p-4 flex-1 border-gray-200 flex itemes-center' key={index}>
+            <div className='bg-white shadow-md rounded-lg p-4 flex-1 flex itemes-center' key={index}>
               <div className={`flex flex-row gap-5 ${el.color}`}>
                 <img src={el.src} alt="" className="w-10 h-10" />
                 <div className="flex flex-col gap-1">

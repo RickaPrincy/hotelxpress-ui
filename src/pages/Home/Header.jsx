@@ -7,25 +7,25 @@ function Header() {
             id: 1,
             imageUrl: "carrousel1.jpg",
             title: { h1: "Bienvenue chez", span: "HotelXpress" },
-            subtitle: "Vous Verer ici tous vos hotels préférer",
-            button: "Voir Hotels",
-            link: "/hotel"
+            subtitle: "Vous verrez ici tous vos hôtels et chambres préférés",
+            button: "Rechercher",
+            link: "/search"
         },
         {
             id: 2,
             imageUrl: "carrousel2.jpg",
             title: { h1: "Devenez un membre", span: "Fidèle" },
-            subtitle: "Inscriver vous maintenant et recever des reductions de prix",
+            subtitle: "Inscrivez-vous maintenant et recevez des réductions de prix",
             button: "S'inscrire",
-            link: "/signin"
+            link: "/signup"
         },
         {
             id: 3,
             imageUrl: "carrousel3.jpg",
             title: { h1: "Visiter nos chambres par", span: "Catégories" },
-            subtitle: "Inscriver vous maintenant et recever des reductions de prix",
-            button: "Voir Chambres",
-            link: "/room"
+            subtitle: "Sélection exquise de vos hôtels et chambres favoris",
+            button: "Contacter",
+            link: "/contact"
         }
     ];
 

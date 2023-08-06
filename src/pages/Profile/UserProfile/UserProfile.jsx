@@ -8,7 +8,7 @@ function UserProfile() {
 
     return (
         <div className="w-full">
-            <div className="bg-gray-100 mt-[0px] flex gap-[10px] ">
+            <div className="mt-[0px] flex gap-[10px] ">
                 <div className="rounded-[15px] p-5 bg-white w-[400px] shadow-lg">
                     <div className="w-full">
                         <img src={ user.user.profil_url_img } alt="Your photo" className="w-full h-[250px] mx-auto" />
@@ -21,7 +21,7 @@ function UserProfile() {
                     <InformationList />
                 </div>
             </div>
-            <div className="bg-gray-100 p-5">
+            <div className="p-5">
                 <StatGrid />
             </div>
         </div>

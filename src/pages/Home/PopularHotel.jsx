@@ -9,12 +9,12 @@ function PopularHotel(){
     useEffect(() => {
         axios.get("http://localhost:5000/find/room/6")
             .then(response => setRooms(response.data))
-            .catch(error => console.log(error))
+            .catch(error => console.log(error));
     }, []);
 
     return (
         <div className="container mx-auto">
-            <h1 className="text-3xl font-bold text-center font-serif mt-3 mb-1">The most popular hotel</h1>
+            <h1 className="text-3xl font-bold text-center font-serif mt-3 mb-1">Chambres les plus populaires</h1>
             <div className="flex items-center justify-center mb-4">
                 <hr className="flex-grow border-t border-gray-500 mr-1 max-w-[20px]" />
                 <GitlabOutlined className="text-2xl text-gray-500" />

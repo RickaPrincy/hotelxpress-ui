@@ -48,17 +48,17 @@ function Navbar() {
                     isAuthentificate() ?
                         <div className="d-c-c cursor-pointer p-1 bg-orange-800 bg-overflow-hidden rounded-[50%]">
                             <Link to={"/profile"}>
-                                <img src={user.user?.profil_url_img} className="rounded-[50%] w-[60px] h-[60px]" alt="Your profile" />
+                                <img src={user.user?.profil_url_img} className="rounded-[50%] w-[40px] h-[40px]" alt="Your profile" />
                             </Link>
                         </div>
                         :
                         <>
-                            <button className="bg-orange-500 text-white px-4 py-2 rounded-lg border border-orange-500 hover:bg-transparent hover:border-orange-500 hover:text-white">
-                                <Link to={"/signup"}>S'inscrire</Link>
-                            </button>
-                            <button className="bg-orange-500 text-white px-4 py-2 rounded-lg border border-orange-500 hover:bg-transparent hover:border-orange-500 hover:text-white">
-                                <Link to={"/signin"}>Se Connecter</Link>
-                            </button>
+                            <Link to={"/signup"} className="bg-orange-500 text-white px-4 py-2 rounded-lg border border-orange-500 hover:bg-transparent hover:border-orange-500 hover:text-white">
+                                S'inscrire
+                            </Link>
+                            <Link to={"/signin"} className="bg-orange-500 text-white px-4 py-2 rounded-lg border border-orange-500 hover:bg-transparent hover:border-orange-500 hover:text-white">
+                                Se Connecter
+                            </Link>
                         </>
                 }
             </div>
