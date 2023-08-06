@@ -4,6 +4,7 @@ import TopBar from "./components/TopBar";
 import UserProfile from "./UserProfile/UserProfile";
 import AdminProfile from "./AdminProfle/AdminProfile";
 import AddRoom from "./AdminProfle/AddRoom";
+import AddHotels from "./AdminProfle/AddHotels";
 
 function Profile() {
     return (
@@ -15,6 +16,7 @@ function Profile() {
                     <Route path="/" element={<UserProfile />} />
                     <Route path="/admin" element={<AdminProfile />} />
                     <Route path="/rooms" element={<AddRoom />} />
+                    <Route path="/Hotels" element={<AddHotels />} />
                 </Routes>
             </div>
 
