@@ -20,7 +20,7 @@ npm start
 - Admin User
 
 ```sh
-email: boto@gmail.com
+email: Bob@gmail.com
 password: 1234
 ```
 
