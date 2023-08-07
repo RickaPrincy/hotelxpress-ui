@@ -5,8 +5,7 @@ import LogoHotel from './LogoHotel';
 import PopularHotel from './PopularHotel';
 import Testimonial from './Testimonial';
 import ContactUs from './ContactUs';
-import CopyrightMessage from './CopyrightMessage';
-import ReservationPage from './ReseravtionPage';
+import CopyrightMessage from '../CopyrightMessage';
 
 const Home = () => {
     return (
@@ -21,7 +20,6 @@ const Home = () => {
             <Testimonial />
             <ContactUs/>
             <CopyrightMessage/>
-            <ReservationPage/>
         </div>
     );
 };

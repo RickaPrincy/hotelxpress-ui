@@ -4,6 +4,7 @@ import Search from "../pages/Search/Search";
 import Signin from "../pages/Signin/Signin";
 import ProfilePrivate from "../pages/Profile/ProfilePrivate";
 import Signup from "../pages/Signup/Signup";
+import ContactUs from "../pages/ContactUs";
 
 function Router() {
     return (
@@ -13,6 +14,8 @@ function Router() {
             <Route path="/signup" element={<Signup/>}/>
             <Route path="/search" element={<Search />} />
             <Route path="/profile/*" element={<ProfilePrivate />} />
+            <Route path="/contactUs" element={<ContactUs />} />
+
         </Routes>
     );
 }
