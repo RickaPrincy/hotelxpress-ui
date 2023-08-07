@@ -4,13 +4,25 @@ import { Form, Input, Radio, DatePicker} from 'antd';
 
 
 const ReservationPage = () => {
+    
     const [paymentMethod, setPaymentMethod] = useState('');
+    const [arrivalDate, setArrivalDate] = useState(null);
+    const [departureDate, setDepartureDate] = useState(null);
+  
     const onFinish = (values) => {
         console.log('Reservation details:', values);
     };
-
+  
     const handlePaymentMethodChange = (e) => {
         setPaymentMethod(e.target.value);
+    };
+  
+    const onArrivalDateChange = (date, dateString) => {
+        setArrivalDate(dateString);
+    };
+  
+    const onDepartureDateChange = (date, dateString) => {
+        setDepartureDate(dateString);
     };
 
     return (
@@ -46,6 +58,25 @@ const ReservationPage = () => {
                                 rules={[{ required: true, message: 'Veuillez entrer votre adresse' }]}
                             >
                                 <Input style={{ color: 'black', border: '1px solid black' }}/>
+                            </Form.Item>
+                        </Form>
+                    </div>
+                    <div className="flex-1">
+                        <h2 className="text-xl font-semibold mb-2">Dates de séjour</h2>
+                        <Form layout="vertical" onFinish={onFinish}>
+                            <Form.Item
+                                label="Date d'arrivée"
+                                name="arrivalDate"
+                                rules={[{ required: true, message: 'Veuillez sélectionner la date d\'arrivée' }]}
+                            >
+                                <DatePicker onChange={onArrivalDateChange} style={{ width: '100%' }} />
+                            </Form.Item>
+                            <Form.Item
+                                label="Date de départ"
+                                name="departureDate"
+                                rules={[{ required: true, message: 'Veuillez sélectionner la date de départ' }]}
+                            >
+                                <DatePicker onChange={onDepartureDateChange} style={{ width: '100%' }} />
                             </Form.Item>
                         </Form>
                     </div>
