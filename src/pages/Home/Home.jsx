@@ -4,6 +4,8 @@ import Header from './Header';
 import LogoHotel from './LogoHotel';
 import PopularHotel from './PopularHotel';
 import Testimonial from './Testimonial';
+import ContactUs from './ContactUs';
+import CopyrightMessage from './CopyrightMessage';
 
 const Home = () => {
     return (
@@ -16,6 +18,8 @@ const Home = () => {
             <PopularHotel />
             <LogoHotel />
             <Testimonial />
+            <ContactUs/>
+            <CopyrightMessage/>
         </div>
     );
 };
