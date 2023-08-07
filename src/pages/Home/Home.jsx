@@ -5,7 +5,7 @@ import LogoHotel from './LogoHotel';
 import PopularHotel from './PopularHotel';
 import Testimonial from './Testimonial';
 import ContactUs from './ContactUs';
-import CopyrightMessage from '../CopyrightMessage';
+import Footer from './Footer';
 
 const Home = () => {
     return (
@@ -19,7 +19,7 @@ const Home = () => {
             <LogoHotel />
             <Testimonial />
             <ContactUs/>
-            <CopyrightMessage/>
+            <Footer/>
         </div>
     );
 };
