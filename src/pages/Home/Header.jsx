@@ -5,7 +5,7 @@ function Header() {
     const carouselImages = [
         {
             id: 1,
-            imageUrl: "carrousel1.jpg",
+            imageUrl: "http://localhost:5000/public/carrousel1.jpg",
             title: { h1: "Bienvenue chez", span: "HotelXpress" },
             subtitle: "Vous verrez ici tous vos hôtels et chambres préférés",
             button: "Rechercher",
@@ -13,7 +13,7 @@ function Header() {
         },
         {
             id: 2,
-            imageUrl: "carrousel2.jpg",
+            imageUrl: "http://localhost:5000/public/carrousel2.jpg",
             title: { h1: "Devenez un membre", span: "Fidèle" },
             subtitle: "Inscrivez-vous maintenant et recevez des réductions de prix",
             button: "S'inscrire",
@@ -21,7 +21,7 @@ function Header() {
         },
         {
             id: 3,
-            imageUrl: "carrousel3.jpg",
+            imageUrl: "http://localhost:5001/public/carrousel3.jpg",
             title: { h1: "Visiter nos chambres par", span: "Catégories" },
             subtitle: "Sélection exquise de vos hôtels et chambres favoris",
             button: "Contacter",

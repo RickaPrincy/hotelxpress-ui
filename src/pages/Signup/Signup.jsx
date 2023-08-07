@@ -58,7 +58,7 @@ function Signup() {
     }
 
     return (
-        <div className="w-full m-0 bg-[url('carrousel3.jpg')]">
+        <div className="w-full m-0 bg-[url('http://localhost:5000/public/carrousel3.jpg')]">
             <div className="bg-hidden w-full h-screen d-c-c flex-col ">
                 <div className="rounded-[5px] bg-white w-[fit-content] text-2xl p-7 box-shadow">
                     <h1 className="font-bold p-3 mb-7 text-center">S'incrire</h1>
