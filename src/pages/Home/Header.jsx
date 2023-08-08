@@ -21,7 +21,7 @@ function Header() {
         },
         {
             id: 3,
-            imageUrl: "http://localhost:5001/public/carrousel3.jpg",
+            imageUrl: "http://localhost:5000/public/carrousel3.jpg",
             title: { h1: "Visiter nos chambres par", span: "Catégories" },
             subtitle: "Sélection exquise de vos hôtels et chambres favoris",
             button: "Contacter",
