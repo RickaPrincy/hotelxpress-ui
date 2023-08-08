@@ -1,12 +1,13 @@
 import Navbar from '../../components/Navbar/Navbar';
 import SearchBar from "../../components/SearchBar/SearchBar";
+import ContactUs from './ContactUs';
 import Footer from './Footer';
 import Header from './Header';
 import LogoHotel from './LogoHotel';
 import PopularHotel from './PopularHotel';
 import Testimonial from './Testimonial';
 
-const Home = () => {
+const Home =() => {
     return (
         <div className="min-h-screen flex flex-col">
             <Navbar />
@@ -17,6 +18,7 @@ const Home = () => {
             <PopularHotel />
             <LogoHotel />
             <Testimonial />
+            <ContactUs/>
             <Footer/>
         </div>
     );

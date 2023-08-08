@@ -12,9 +12,9 @@ function Navbar() {
     const user = useContext(UserInfo);
 
     const navLinks = [
-        { key: 1, icon: <HomeOutlined />, label: <Link to={"/"}>Home</Link> },
+        { key: 1, icon: <HomeOutlined />, label: <Link to={"/"}>Acceuil</Link> },
         { key: 2, icon: <UserOutlined />, label: <Link to={"/Hotel"}>Hotel</Link> },
-        { key: 3, icon: <UserOutlined />, label: <Link to={"/Room"}>Room</Link> },
+        { key: 3, icon: <UserOutlined />, label: <Link to={"/Room"}>Chambres</Link> },
         { key: 4, icon: <PhoneOutlined />, label: <Link to={"/contact"}>Contact</Link> },
     ]
 
